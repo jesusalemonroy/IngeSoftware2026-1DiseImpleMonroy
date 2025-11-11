@@ -39,6 +39,28 @@ do{
 
 const btnEstrella = document.getElementById("btnEstrella");
 
-btnEstrella.addEventListener("click", ()=> {
+btnEstrella.addEventListener("click", ()=> { // Evento de doble click
     cielo.innerHTML += "⭐";
+})
+
+// Eventos
+
+const btnPlaneta = document.getElementById("btnPlaneta");
+
+btnPlaneta.addEventListener("dblclick", () => { // Evento de doble click
+    cielo.innerHTML += "🪐"
+})
+
+const inputEmoji = document.getElementById("inputEmoji");
+
+const btnAgregarEmoji = document.getElementById("btnAgregaEmoji");
+
+btnAgregarEmoji.addEventListener("click", () => {
+    var emoji = inputEmoji.value.trim();
+    if(emoji) cielo.innerHTML += emoji;
+    inputEmoji.value="";
+})
+
+inputEmoji.addEventListener("keydown", e => {
+    if(e.key==="Escape") cielo.innerHTML="";
 })
