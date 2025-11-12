@@ -64,3 +64,4 @@ btnAgregarEmoji.addEventListener("click", () => {
 inputEmoji.addEventListener("keydown", e => {
     if(e.key==="Escape") cielo.innerHTML="";
 })
+
